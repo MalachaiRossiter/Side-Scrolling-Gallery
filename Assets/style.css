@@ -20,7 +20,7 @@ a{
 
 .navbar{
     position: fixed;
-    width: 50px;
+    width: 3%;
     height: 100%;
     padding: 10px;
     background-color: rgb(255, 255, 255, 1);
@@ -29,12 +29,15 @@ a{
     justify-content: center;
     align-items: center;
     border-right: 1px solid rgb(211, 211, 211);
-    transition: 0.2s;
+    transition: .75s;
     flex-shrink: 0;
 }
 
 .navbutton-container{
     padding: 20px;
+    position: absolute;
+    opacity: 1;
+    transition: opacity 0.25s ease-in;
 }
 
 .navdot{
@@ -47,6 +50,8 @@ a{
 
 .majorLinks{
     margin-bottom: 40%;
+    opacity: 0;
+    transition: opacity 0.25s ease-in;
 }
 
 .majorLinks li{
@@ -62,6 +67,11 @@ a{
     color: #000;
 }
 
+.minorLinks{
+    opacity: 0;
+    transition: opacity .25s ease-in;
+}
+
 .imglink{
     padding: 10px;
 }
@@ -75,11 +85,14 @@ a{
 .close {
     width: 60px;
     height: 60px;
-    position: fixed;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0;
 }
 .close:after {
     content: '';
-    height: 60px;
+    height: 40px;
     border-left: 2px solid rgb(0, 0, 0);
     position: absolute;
     transform: rotate(45deg);
@@ -88,7 +101,7 @@ a{
 
 .close:before {
     content: '';
-    height: 60px;
+    height: 40px;
     border-left: 2px solid rgb(0, 0, 0);
     position: absolute;
     transform: rotate(-45deg);
