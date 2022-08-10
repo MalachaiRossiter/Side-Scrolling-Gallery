@@ -1,0 +1,96 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "PT Sans", sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* The Navbar */
+.navbar-container{
+    display: flex;
+    position: relative;
+}
+
+.navbar{
+    position: fixed;
+    width: 50px;
+    height: 100%;
+    padding: 10px;
+    background-color: rgb(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgb(211, 211, 211);
+    transition: 0.2s;
+    flex-shrink: 0;
+}
+
+.navbutton-container{
+    padding: 20px;
+}
+
+.navdot{
+    height: 5px;
+    width: 5px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.majorLinks{
+    margin-bottom: 40%;
+}
+
+.majorLinks li{
+    margin: 20px;
+}
+.navlink{
+    color: rgb(26, 26, 26);
+    font-size: 40px;
+    transition: 0.2s;
+}
+.navlink:hover{
+    font-weight: 700;
+    color: #000;
+}
+
+.imglink{
+    padding: 10px;
+}
+
+#copiedEmail{
+    display: none;
+    font-size: 24px;
+    border-bottom: 5px solid rgb(131, 255, 100);
+}
+
+.close {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+}
+.close:after {
+    content: '';
+    height: 60px;
+    border-left: 2px solid rgb(0, 0, 0);
+    position: absolute;
+    transform: rotate(45deg);
+    left: 28px;
+}
+
+.close:before {
+    content: '';
+    height: 60px;
+    border-left: 2px solid rgb(0, 0, 0);
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 28px;
+}
