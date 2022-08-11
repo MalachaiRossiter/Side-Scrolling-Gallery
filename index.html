@@ -9,28 +9,43 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navbar -->
     <div class="navbar-container">
         <div class="navbar">
-            <div class="close">
+            <div class="close linkitem">
             </div>
-            <ul class="majorLinks">
-                <li><a class="navlink" href="#">Comissions</a></li>
-                <li><a class="navlink" href="#">Gallery</a></li>
-                <li><a class="navlink" href="#">Biography</a></li>
+            <ul class="majorLinks linkitem">
+                <li><a class="navlink linkitem" href="#">Comissions</a></li>
+                <li><a class="navlink linkitem" href="#">Gallery</a></li>
+                <li><a class="navlink linkitem" href="#">Biography</a></li>
             </ul>
-            <div class="navbutton-container">
+            <div class="navbutton-container linkitem">
                 <div class="navdot"></div>
                 <div class="navdot"></div>
                 <div class="navdot"></div>
             </div>
             <div class="minorLinks">
                 <img class="imglink linkitem" onclick="copyClipboard()" src="./Assets/Images/gmailicon.png" alt="gmail"></a>
-                <a href="https://github.com/MalachaiRossiter"><img class="imglink linkitem" src="./Assets/Images/instagramicon.png" alt="instagram"></a>
-                <a href="https://www.linkedin.com/in/malachai-rossiter-46639923a/"><img class="imglink linkitem" src="./Assets/Images/twittericon.png" alt="twitter"></a>
+                <a href="https://www.instagram.com/tinkeringartist/"><img class="imglink linkitem" src="./Assets/Images/instagramicon.png" alt="instagram"></a>
+                <a href="https://twitter.com/tinkeringartist/"><img class="imglink linkitem" src="./Assets/Images/twittericon.png" alt="twitter"></a>
             </div>
             <p id="copiedEmail">Copied email to clipboard!</p>
         </div>
     </div>
+
+    <!-- the body content -->
+    <div class="outer-wrapper">
+        <div class="wrapper">
+            <div class="slide one"></div>
+            <div class="slide two"></div>
+            <div class="slide three"></div>
+            <div class="slide four"></div>
+        </div>
+    </div>
+
+
+    <!-- creating a mouse pointer -->
+    <div class="cursor"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./Assets/script.js"></script>
 </body>

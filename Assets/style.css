@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     font-family: "PT Sans", sans-serif;
+    cursor: none;
 }
 
 ul{
@@ -15,7 +16,8 @@ a{
 /* The Navbar */
 .navbar-container{
     display: flex;
-    position: relative;
+    position: fixed;
+    z-index: 2;
 }
 
 .navbar{
@@ -52,6 +54,7 @@ a{
     margin-bottom: 40%;
     opacity: 0;
     transition: opacity 0.25s ease-in;
+    pointer-events: none;
 }
 
 .majorLinks li{
@@ -70,6 +73,7 @@ a{
 .minorLinks{
     opacity: 0;
     transition: opacity .25s ease-in;
+    pointer-events: none;
 }
 
 .imglink{
@@ -82,6 +86,7 @@ a{
     border-bottom: 5px solid rgb(131, 255, 100);
 }
 
+/* close button in navbar */
 .close {
     width: 60px;
     height: 60px;
@@ -89,6 +94,7 @@ a{
     top: 20px;
     right: 20px;
     opacity: 0;
+    pointer-events: none;
 }
 .close:after {
     content: '';
@@ -106,4 +112,73 @@ a{
     position: absolute;
     transform: rotate(-45deg);
     left: 28px;
+}
+
+/* body turned sideways */
+
+.slide{
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 400vw; /*make sure this is the total value of content inside it */
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+
+.one{
+    background-color: #000;
+}
+
+.two{
+    background-color: rgb(241, 67, 67);
+}
+
+.three{
+    background-color: rgb(78, 255, 217);
+}
+
+.four{
+    background-color: rgb(144, 255, 130);
+}
+
+.outer-wrapper{
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+/* cursor */
+.cursor{
+    width: 7px;
+    height: 7px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+    transition: 0.05s linear;
+    transition: background-color 0.25s ease-in;
+}
+
+.cursorLink {
+    width: 21px;
+    height: 21px;
+    background-color: rgba(255, 255, 255, .25);
+    border: 1px solid rgb(0, 0, 0);
+    pointer-events: none;
 }
