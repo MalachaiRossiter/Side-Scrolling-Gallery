@@ -100,7 +100,3 @@ const arrowTimer = setInterval(() => {
     }
     console.log(timeleft)
 }, 1000);
-
-// for (i = 0; 1 < 1000; i++){
-//     console.log("penis");
-// }
