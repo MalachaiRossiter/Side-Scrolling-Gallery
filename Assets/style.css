@@ -13,6 +13,45 @@ a{
     text-decoration: none;
 }
 
+/* cursor */
+.cursor{
+    width: 7px;
+    height: 7px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+    transition: 0.05s linear;
+    transition: background-color 0.25s ease-in;
+}
+
+.cursorLink {
+    width: 21px;
+    height: 21px;
+    background-color: rgba(255, 255, 255, .25);
+    border: 1px solid rgb(0, 0, 0);
+    pointer-events: none;
+}
+
+/* Scroll area in corner */
+.scrollNote{
+    position: fixed;
+    bottom: 7%;
+    right: 7%;
+    z-index: 2;
+    color: #fff;
+    font-size: 24px;
+}
+
+.material-symbols-outlined{
+    position: relative;
+    top: 5px;
+    margin-left: 20px;
+    opacity: 1;
+    transition: .5s ease-in;
+}
+
 /* The Navbar */
 .navbar-container{
     display: flex;
@@ -129,8 +168,24 @@ a{
     transform-origin: top left;
 }
 
+/* Hero Area */
 .one{
-    background-color: #000;
+    background: url("/Assets/Images/marissa-rhice-window-into-the-soul_orig.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.title{
+    background-color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 45vh;
+    margin-left: 30vh;
+    letter-spacing: 1.5rem;
+}
+
+.title span{
+    font-weight: 400;
 }
 
 .two{
@@ -158,27 +213,4 @@ a{
 }
 ::-webkit-scrollbar{
     display: none;
-}
-
-
-
-/* cursor */
-.cursor{
-    width: 7px;
-    height: 7px;
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: 50%;
-    position: absolute;
-    pointer-events: none;
-    z-index: 10;
-    transition: 0.05s linear;
-    transition: background-color 0.25s ease-in;
-}
-
-.cursorLink {
-    width: 21px;
-    height: 21px;
-    background-color: rgba(255, 255, 255, .25);
-    border: 1px solid rgb(0, 0, 0);
-    pointer-events: none;
 }

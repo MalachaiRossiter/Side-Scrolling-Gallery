@@ -26,18 +26,19 @@ $(".navbutton-container").click(function(){
 $(".close").click(function(){
     $(".majorLinks").css({
         opacity: "0",
-        PointerEvent: "none"
+        pointerEvents: "none"
     });
     $(".minorLinks").css({
         opacity: "0",
-        PointerEvent: "none"
+        pointerEvents: "none"
     });
     $(".close").css({
         opacity: "0",
-        PointerEvent: "none"
+        pointerEvents: "none"
     });
     $("#copiedEmail").css({
-        visibility: "hidden"
+        visibility: "hidden",
+        pointerEvents: "none"
     })
     setTimeout(function(){
         $(".navbutton-container").css({
@@ -67,9 +68,39 @@ document.addEventListener("mousemove", e => {
         cursor.classList.remove("cursorLink");
     }
     if (e.target.classList.contains("navbar")){
-        console.log("Something");
         $(".cursor").css({
             backgroundColor: "#000"
         });
     }
 })
+
+//getting the scroll arrow to move on timer
+let timeleft = 10;
+const arrowTimer = setInterval(() => {
+    if (timeleft == 8) {
+        $(".material-symbols-outlined").css({
+            left: "20px",
+            opacity: "0"
+        });
+    }
+    if (timeleft == 5) {
+        $(".material-symbols-outlined").css({
+            left: "-20px",
+        });
+    }
+    if (timeleft == 3) {
+        $(".material-symbols-outlined").css({
+            opacity: "1",
+            left: "0px"
+        });
+    }
+    timeleft -= 1;
+    if (timeleft <= 0){
+        timeleft = 10;
+    }
+    console.log(timeleft)
+}, 1000);
+
+// for (i = 0; 1 < 1000; i++){
+//     console.log("penis");
+// }
